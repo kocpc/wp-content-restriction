@@ -104,13 +104,13 @@ class WP_Content_Restriction_Settings_Field {
     public static function element_advertisement_code() {
         
         // Get option value from database
-        $value = get_option( 'wpcr-advertisement' );
+        $value = get_option( 'wpcr-advertisement-code' );
         
         // Placeholder
         $placeholder = __( 'You can put your advertisement code or tracking code here.', CR_PLUGIN_TEXT_DOMAIN );
         
         // Return element
-        echo "<textarea class='large-text' name='wpcr-advertisement' rows='8'></textarea>";
+        echo "<textarea class='large-text' name='wpcr-advertisement-code' rows='8'></textarea>";
         
     }
     

@@ -58,13 +58,18 @@ class WP_Content_Restriction_Settings {
      * @since 0.1
      */
     public static function setting_options_handler() {
-        // General Options
+        
+        /**
+         * General Options
+         */
         add_settings_section(
-            'general-options',
+            'wpcr-general-options',
             __( 'General Options', CR_PLUGIN_TEXT_DOMAIN ),
             null,
             self::CR_PLUGIN_SETTINGS_SLUG
         );
+        
+        // Whether allow user restrict author page himself
         add_settings_field(
             'wpcr-allow-restrict-self-page',
             __( 'Restrict Author Page', CR_PLUGIN_TEXT_DOMAIN ),
@@ -72,71 +77,98 @@ class WP_Content_Restriction_Settings {
             self::CR_PLUGIN_SETTINGS_SLUG,
             'general-options'
         );
+        register_setting( 'wpcr-general-options', 'wpcr-allow-restrict-self-page' );
+        
+        // Whether allow user restrict all post himself
         add_settings_field(
             'wpcr-allow-restrict-all-post',
             __( 'Restrict All Post by User', CR_PLUGIN_TEXT_DOMAIN ),
             array( 'WP_Content_Restriction_Settings_Field', 'element_allow_restrict_all_post' ),
             self::CR_PLUGIN_SETTINGS_SLUG,
-            'general-options'
+            'wpcr-general-options'
         );
+        register_setting( 'wpcr-general-options', 'wpcr-allow-restrict-all-post' );
         
-        // Messages
+        /**
+         * Messages
+         */
         add_settings_section(
-            'messages',
+            'wpcr-messages',
             __( 'Messages Box', CR_PLUGIN_TEXT_DOMAIN ),
             null,
             self::CR_PLUGIN_SETTINGS_SLUG
         );
+        
+        // Message title
         add_settings_field(
             'wpcr-message-title',
             __( 'Message Title', CR_PLUGIN_TEXT_DOMAIN ),
             array( 'WP_Content_Restriction_Settings_Field', 'element_message_title' ),
             self::CR_PLUGIN_SETTINGS_SLUG,
-            'messages'
+            'wpcr-messages'
         );
+        register_setting( 'wpcr-messages', 'wpcr-message-title' );
+        
+        // Message Body
         add_settings_field(
             'wpcr-message-body',
             __( 'Message Body', CR_PLUGIN_TEXT_DOMAIN ),
             array( 'WP_Content_Restriction_Settings_Field', 'element_message_body' ),
             self::CR_PLUGIN_SETTINGS_SLUG,
-            'messages'
+            'wpcr-messages'
         );
+        register_setting( 'wpcr-messages', 'wpcr-message-body' );
+        
+        // Accept button
         add_settings_field(
             'wpcr-accept-button',
             __( 'Accept Button', CR_PLUGIN_TEXT_DOMAIN ),
             array( 'WP_Content_Restriction_Settings_Field', 'element_custom_accept_button' ),
             self::CR_PLUGIN_SETTINGS_SLUG,
-            'messages'
+            'wpcr-messages'
         );
+        register_setting( 'wpcr-messages', 'wpcr-accept-button' );
+        
+        // Decline button
         add_settings_field(
             'wpcr-decline-button',
             __( 'Decline Button', CR_PLUGIN_TEXT_DOMAIN ),
             array( 'WP_Content_Restriction_Settings_Field', 'element_custom_decline_button' ),
             self::CR_PLUGIN_SETTINGS_SLUG,
-            'messages'
+            'wpcr-messages'
         );
+        register_setting( 'wpcr-messages', 'wpcr-decline-button' );
+        
+        // Decline redirect
         add_settings_field(
             'wpcr-decline-redirect',
             __( 'Decline Redirect', CR_PLUGIN_TEXT_DOMAIN ),
             array( 'WP_Content_Restriction_Settings_Field', 'element_custom_decline_redirect' ),
             self::CR_PLUGIN_SETTINGS_SLUG,
-            'messages'
+            'wpcr-messages'
         );
+        register_setting( 'wpcr-messages', 'wpcr-decline-redirect' );
         
-        // Advertisement
+        /**
+         * Advertisement
+         */
         add_settings_section(
-            'advertisement',
+            'wpcr-advertisement',
             __( 'Advertisement', CR_PLUGIN_TEXT_DOMAIN ),
             null,
             self::CR_PLUGIN_SETTINGS_SLUG
         );
+        
+        // Advertisement code
         add_settings_field(
-            'wpcr-advertisement',
+            'wpcr-advertisement-code',
             __( 'Advertise Code', CR_PLUGIN_TEXT_DOMAIN ),
             array( 'WP_Content_Restriction_Settings_Field', 'element_advertisement_code' ),
             self::CR_PLUGIN_SETTINGS_SLUG,
-            'advertisement'
+            'wpcr-advertisement'
         );
+        register_setting( 'wpcr-advertisement', 'wpcr-advertisement-code' );
+        
     }
     
 }

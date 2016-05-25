@@ -9,3 +9,16 @@ msgstr ""
 #. General options title
 msgid "General Options"
 msgstr ""
+
+#. Setting fields title on general options section
+msgid "Restrict Author Page"
+msgstr ""
+
+msgid "Restrict All Post by User"
+msgstr ""
+
+msgid "Whether allow users restrict author page himself?"
+msgstr ""
+
+msgid "Whether allow users restrict all him published post?"
+msgstr ""

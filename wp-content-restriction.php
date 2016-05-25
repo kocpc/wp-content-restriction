@@ -35,6 +35,14 @@ define( 'CR_PLUGIN_FILE_BASENAME', pathinfo( __FILE__, PATHINFO_FILENAME ) );
 define( 'CR_PLUGIN_TEXT_DOMAIN', 'wp-content-restriction' );
 
 /**
+ * Load languages
+ */
+function load_textdomain() {
+    load_plugin_textdomain( CR_PLUGIN_TEXT_DOMAIN, false, CR_PLUGIN_FILE_BASENAME . '/languages' );
+}
+add_action( 'plugins_loaded', 'load_textdomain' );
+
+/**
  * Import plugin classes.
  */
 include_once( CR_PLUGIN_BASE_FULL . '/settings/class-wp-content-restriction-settings.php' );

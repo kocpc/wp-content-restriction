@@ -210,4 +210,13 @@ class WP_Content_Restriction_Settings {
         
     }
     
+    /**
+     * User options render
+     * 
+     * @since 0.1
+     */
+    public static function user_options_render() {
+        
+    }
+    
 }

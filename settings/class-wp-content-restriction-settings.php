@@ -66,26 +66,47 @@ class WP_Content_Restriction_Settings {
             self::CR_PLUGIN_SETTINGS_SLUG
         );
         add_settings_field(
-            'allow-restrict-self-page',
+            'wpcr-allow-restrict-self-page',
             __( 'Restrict Author Page', CR_PLUGIN_TEXT_DOMAIN ),
             array( 'WP_Content_Restriction_Settings_Field', 'element_allow_restrict_self_page' ),
             self::CR_PLUGIN_SETTINGS_SLUG,
             'general-options'
         );
         add_settings_field(
-            'allow-restrict-all-post',
+            'wpcr-allow-restrict-all-post',
             __( 'Restrict All Post by User', CR_PLUGIN_TEXT_DOMAIN ),
             array( 'WP_Content_Restriction_Settings_Field', 'element_allow_restrict_all_post' ),
             self::CR_PLUGIN_SETTINGS_SLUG,
             'general-options'
         );
         
-        // Custom Options
+        // Messages
         add_settings_section(
-            'custom',
-            __( 'Custom', CR_PLUGIN_TEXT_DOMAIN ),
+            'messages',
+            __( 'Messages', CR_PLUGIN_TEXT_DOMAIN ),
             null,
             self::CR_PLUGIN_SETTINGS_SLUG
+        );
+        add_settings_field(
+            'wpcr-message-title',
+            __( 'Message Title', CR_PLUGIN_TEXT_DOMAIN ),
+            array( 'WP_Content_Restriction_Settings_Field', 'element_message_title' ),
+            self::CR_PLUGIN_SETTINGS_SLUG,
+            'messages'
+        );
+        add_settings_field(
+            'wpcr-message-body',
+            __( 'Message Body', CR_PLUGIN_TEXT_DOMAIN ),
+            array( 'WP_Content_Restriction_Settings_Field', 'element_message_body' ),
+            self::CR_PLUGIN_SETTINGS_SLUG,
+            'messages'
+        );
+        add_settings_field(
+            'wpcr-accept-button',
+            __( 'Accept Button', CR_PLUGIN_TEXT_DOMAIN ),
+            array( 'WP_Content_Restriction_Settings_Field', 'element_custom_accept_button' ),
+            self::CR_PLUGIN_SETTINGS_SLUG,
+            'messages'
         );
         
     }

@@ -1,0 +1,7 @@
+#. Plugin name
+msgid "WP Content Restriction"
+msgstr ""
+
+#. Setting page title
+msgid "WP Content Restriction Settings"
+msgstr ""

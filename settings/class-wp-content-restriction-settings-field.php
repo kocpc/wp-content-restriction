@@ -110,7 +110,32 @@ class WP_Content_Restriction_Settings_Field {
         $placeholder = __( 'You can put your advertisement code or tracking code here.', CR_PLUGIN_TEXT_DOMAIN );
         
         // Return element
-        echo "<textarea class='large-text' name='wpcr-advertisement-code' rows='8'></textarea>";
+        echo "<textarea class='large-text' name='wpcr-advertisement-code' rows='8' placeholder='{$placeholder}'>{$value}</textarea>";
+        
+    }
+    
+    public static function element_shortcode_list() {
+        
+        // Get option value from database
+        $value = get_option( 'wpcr-shortcode-list' );
+        
+        // If value not null, replace array to text
+        if( null != $value ) {
+            foreach( $value as $shortcode ) {
+                if( ! isset( $output ) ) {
+                    $output = $value;
+                } else {
+                    $output .= '\n' . $value;
+                }
+            }
+            $value = $output;
+        }
+        
+        // Placeholder
+        $placeholder = __( 'Multiple shortcode use <Enter> to separate.', CR_PLUGIN_TEXT_DOMAIN );
+        
+        // Return element
+        echo "<textarea class='large-text' name='wpcr-shortcode-list' rows='5' placeholder='{$placeholder}'>{$value}</textarea>";
         
     }
     

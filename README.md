@@ -1,5 +1,5 @@
 # WP Content Restriction
-You can use this plugin to show up notice. Like "Cookie Notice" or "Adult Content Notice".
+⛔ You can use this plugin to show up notice on article / page. Like "Cookie Notice" or "Adult Content Notice".
 
 ## Installation
 

@@ -77,7 +77,7 @@ class WP_Content_Restriction_Settings {
             self::CR_PLUGIN_SETTINGS_SLUG,
             'wpcr-general-options'
         );
-        register_setting( 'wpcr-general-options', 'wpcr-allow-restrict-self-page' );
+        register_setting( self::CR_PLUGIN_SETTINGS_SLUG, 'wpcr-allow-restrict-self-page' );
         
         // Whether allow user restrict all post himself
         add_settings_field(
@@ -87,7 +87,7 @@ class WP_Content_Restriction_Settings {
             self::CR_PLUGIN_SETTINGS_SLUG,
             'wpcr-general-options'
         );
-        register_setting( 'wpcr-general-options', 'wpcr-allow-restrict-all-post' );
+        register_setting( self::CR_PLUGIN_SETTINGS_SLUG, 'wpcr-allow-restrict-all-post' );
         
         /**
          * Messages
@@ -107,7 +107,7 @@ class WP_Content_Restriction_Settings {
             self::CR_PLUGIN_SETTINGS_SLUG,
             'wpcr-messages'
         );
-        register_setting( 'wpcr-messages', 'wpcr-message-title' );
+        register_setting( self::CR_PLUGIN_SETTINGS_SLUG, 'wpcr-message-title' );
         
         // Message Body
         add_settings_field(
@@ -117,7 +117,7 @@ class WP_Content_Restriction_Settings {
             self::CR_PLUGIN_SETTINGS_SLUG,
             'wpcr-messages'
         );
-        register_setting( 'wpcr-messages', 'wpcr-message-body' );
+        register_setting( self::CR_PLUGIN_SETTINGS_SLUG, 'wpcr-message-body' );
         
         // Accept button
         add_settings_field(
@@ -127,7 +127,7 @@ class WP_Content_Restriction_Settings {
             self::CR_PLUGIN_SETTINGS_SLUG,
             'wpcr-messages'
         );
-        register_setting( 'wpcr-messages', 'wpcr-accept-button' );
+        register_setting( self::CR_PLUGIN_SETTINGS_SLUG, 'wpcr-accept-button' );
         
         // Decline button
         add_settings_field(
@@ -137,7 +137,7 @@ class WP_Content_Restriction_Settings {
             self::CR_PLUGIN_SETTINGS_SLUG,
             'wpcr-messages'
         );
-        register_setting( 'wpcr-messages', 'wpcr-decline-button' );
+        register_setting( self::CR_PLUGIN_SETTINGS_SLUG, 'wpcr-decline-button' );
         
         // Decline redirect
         add_settings_field(
@@ -147,7 +147,7 @@ class WP_Content_Restriction_Settings {
             self::CR_PLUGIN_SETTINGS_SLUG,
             'wpcr-messages'
         );
-        register_setting( 'wpcr-messages', 'wpcr-decline-redirect' );
+        register_setting( self::CR_PLUGIN_SETTINGS_SLUG, 'wpcr-decline-redirect' );
         
         /**
          * Advertisement
@@ -167,7 +167,7 @@ class WP_Content_Restriction_Settings {
             self::CR_PLUGIN_SETTINGS_SLUG,
             'wpcr-advertisement'
         );
-        register_setting( 'wpcr-advertisement', 'wpcr-advertisement-code' );
+        register_setting( self::CR_PLUGIN_SETTINGS_SLUG, 'wpcr-advertisement-code' );
         
         /**
          * Shortcode
@@ -187,7 +187,7 @@ class WP_Content_Restriction_Settings {
             self::CR_PLUGIN_SETTINGS_SLUG,
             'wpcr-shortcode'
         );
-        register_setting( 'wpcr-shortcode', 'wpcr-shortcode-list' );
+        register_setting( self::CR_PLUGIN_SETTINGS_SLUG, 'wpcr-shortcode-list' );
         
     }
     

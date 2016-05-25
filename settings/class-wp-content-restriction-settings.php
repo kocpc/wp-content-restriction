@@ -83,7 +83,7 @@ class WP_Content_Restriction_Settings {
         // Messages
         add_settings_section(
             'messages',
-            __( 'Messages', CR_PLUGIN_TEXT_DOMAIN ),
+            __( 'Messages Box', CR_PLUGIN_TEXT_DOMAIN ),
             null,
             self::CR_PLUGIN_SETTINGS_SLUG
         );
@@ -108,7 +108,35 @@ class WP_Content_Restriction_Settings {
             self::CR_PLUGIN_SETTINGS_SLUG,
             'messages'
         );
+        add_settings_field(
+            'wpcr-decline-button',
+            __( 'Decline Button', CR_PLUGIN_TEXT_DOMAIN ),
+            array( 'WP_Content_Restriction_Settings_Field', 'element_custom_decline_button' ),
+            self::CR_PLUGIN_SETTINGS_SLUG,
+            'messages'
+        );
+        add_settings_field(
+            'wpcr-decline-redirect',
+            __( 'Decline Redirect', CR_PLUGIN_TEXT_DOMAIN ),
+            array( 'WP_Content_Restriction_Settings_Field', 'element_custom_decline_redirect' ),
+            self::CR_PLUGIN_SETTINGS_SLUG,
+            'messages'
+        );
         
+        // Advertisement
+        add_settings_section(
+            'advertisement',
+            __( 'Advertisement', CR_PLUGIN_TEXT_DOMAIN ),
+            null,
+            self::CR_PLUGIN_SETTINGS_SLUG
+        );
+        add_settings_field(
+            'wpcr-advertisement',
+            __( 'Advertise Code', CR_PLUGIN_TEXT_DOMAIN ),
+            array( 'WP_Content_Restriction_Settings_Field', 'element_advertisement_code' ),
+            self::CR_PLUGIN_SETTINGS_SLUG,
+            'advertisement'
+        );
     }
     
 }

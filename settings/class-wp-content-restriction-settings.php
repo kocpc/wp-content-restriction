@@ -187,7 +187,26 @@ class WP_Content_Restriction_Settings {
             self::CR_PLUGIN_SETTINGS_SLUG,
             'wpcr-shortcode'
         );
-        register_setting( self::CR_PLUGIN_SETTINGS_SLUG, 'wpcr-shortcode-list' );
+        register_setting( self::CR_PLUGIN_SETTINGS_SLUG, 'wpcr-shortcode-list', array( 'WP_Content_Restriction_Settings', 'shortcode_explode_handler' ) );
+        
+    }
+    
+    /**
+     * Shortcode explode handler
+     * 
+     * @param string $input Input from register_setting callback
+     * @since 0.1
+     */
+    public static function shortcode_explode_handler( $input ) {
+
+        // Check input is not null
+        if( ! $input || 0 >= strlen( $input ) ) return;
+        
+        // Explode value
+        $input = explode( PHP_EOL, $input );
+        
+        // Return value
+        return $input;
         
     }
     

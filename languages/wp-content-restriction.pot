@@ -61,3 +61,12 @@ msgstr ""
 
 msgid "Advertise Code"
 msgstr ""
+
+msgid "Multiple shortcode use <Enter> to separate."
+msgstr ""
+
+msgid "Use Shortcode Enable Restriction"
+msgstr ""
+
+msgid "Shortcode List"
+msgstr ""

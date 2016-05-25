@@ -3,7 +3,7 @@
     <form action="options.php" method="post">
         <?php
             @settings_fields( self::CR_PLUGIN_SETTINGS_SLUG );
-            @do_settings_sections( self::CR_PLUGIN_SETTINGS_SECTION_SLUG );
+            @do_settings_sections( self::CR_PLUGIN_SETTINGS_SLUG );
             @submit_button();
         ?>
     </form>

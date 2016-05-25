@@ -37,8 +37,9 @@ define( 'CR_PLUGIN_TEXT_DOMAIN', 'wp-content-restriction' );
 /**
  * Import plugin classes.
  */
-
+include_once( CR_PLUGIN_BASE_FULL . '/settings/class-wp-content-restriction-settings.php' );
 
 /**
  * Initial plugin.
  */
+WP_Content_Restriction_Settings::init();

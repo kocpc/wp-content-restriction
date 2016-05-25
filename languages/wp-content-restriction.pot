@@ -17,7 +17,7 @@ msgstr ""
 msgid "Restrict All Post by User"
 msgstr ""
 
-msgid "Messages"
+msgid "Messages Box"
 msgstr ""
 
 msgid "Message Title"
@@ -39,4 +39,25 @@ msgid "Notice message body content."
 msgstr ""
 
 msgid "Custom accept button text. Default: Accept"
+msgstr ""
+
+msgid "Custom decline button text. Default: Decline"
+msgstr ""
+
+msgid "Accept Button"
+msgstr ""
+
+msgid "Decline Button"
+msgstr ""
+
+msgid "Custom decline redirect URL. Default: Homepage"
+msgstr ""
+
+msgid "Decline Redirect"
+msgstr ""
+
+msgid "Advertisement"
+msgstr ""
+
+msgid "Advertise Code"
 msgstr ""

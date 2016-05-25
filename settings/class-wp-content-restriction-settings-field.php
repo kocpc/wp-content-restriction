@@ -75,4 +75,43 @@ class WP_Content_Restriction_Settings_Field {
         
     }
     
+    public static function element_custom_decline_button() {
+        
+        // Get option value form database
+        $value = get_option( 'wpcr-decline-button' );
+        
+        // Placeholder
+        $placeholder = __( 'Custom decline button text. Default: Decline', CR_PLUGIN_TEXT_DOMAIN );
+        
+        // Return element
+        echo "<input class='regular-text' type='text' name='wpcr-decline-button' value='{$value}' placeholder='{$placeholder}' />";
+        
+    }
+    
+    public static function element_custom_decline_redirect() {
+        
+        // Get option value from database
+        $value = get_option( 'wpcr-decline-redirect' );
+        
+        // Placeholder
+        $placeholder = __( 'Custom decline redirect URL. Default: Homepage', CR_PLUGIN_TEXT_DOMAIN );
+        
+        // Return element
+        echo "<input class='regular-text' type='text' name='wpcr-decline-redirect' value='{$value}' placeholder='{$placeholder}' />";
+        
+    }
+    
+    public static function element_advertisement_code() {
+        
+        // Get option value from database
+        $value = get_option( 'wpcr-advertisement' );
+        
+        // Placeholder
+        $placeholder = __( 'You can put your advertisement code or tracking code here.', CR_PLUGIN_TEXT_DOMAIN );
+        
+        // Return element
+        echo "<textarea class='large-text' name='wpcr-advertisement' rows='8'></textarea>";
+        
+    }
+    
 }

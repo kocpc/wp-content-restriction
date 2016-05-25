@@ -75,7 +75,7 @@ class WP_Content_Restriction_Settings {
             __( 'Restrict Author Page', CR_PLUGIN_TEXT_DOMAIN ),
             array( 'WP_Content_Restriction_Settings_Field', 'element_allow_restrict_self_page' ),
             self::CR_PLUGIN_SETTINGS_SLUG,
-            'general-options'
+            'wpcr-general-options'
         );
         register_setting( 'wpcr-general-options', 'wpcr-allow-restrict-self-page' );
         

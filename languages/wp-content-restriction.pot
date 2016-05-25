@@ -32,7 +32,7 @@ msgstr ""
 msgid "Whether allow users restrict all him published post?"
 msgstr ""
 
-msgid "Notice message title."
+msgid "Notice message title. Default: Notice"
 msgstr ""
 
 msgid "Notice message body content."

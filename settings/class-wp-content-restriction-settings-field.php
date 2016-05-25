@@ -42,7 +42,7 @@ class WP_Content_Restriction_Settings_Field {
         $value = get_option( 'wpcr-message-title' );
         
         // Placeholder
-        $placeholder = __( 'Notice message title.', CR_PLUGIN_TEXT_DOMAIN );
+        $placeholder = __( 'Notice message title. Default: Notice', CR_PLUGIN_TEXT_DOMAIN );
         
         // Return element
         echo "<input class='regular-text' type='text' name='wpcr-message-title' value='{$value}' placeholder='{$placeholder}' />";

@@ -120,12 +120,12 @@ class WP_Content_Restriction_Settings_Field {
         $value = get_option( 'wpcr-shortcode-list' );
         
         // If value not null, replace array to text
-        if( null != $value ) {
+        if( is_array( $value ) && 0 < count( $value ) ) {
             foreach( $value as $shortcode ) {
                 if( ! isset( $output ) ) {
-                    $output = $value;
+                    $output = $shortcode;
                 } else {
-                    $output .= '\n' . $value;
+                    $output .= PHP_EOL . $shortcode;
                 }
             }
             $value = $output;

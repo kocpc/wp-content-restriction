@@ -44,6 +44,6 @@ class WP_Content_Restriction_Settings {
      * @since 0.1
      */
     public static function options_page_handler() {
-        
+        include_once( CR_PLUGIN_BASE_FULL . '/settings/template-wp-content-restriction-options.php' );
     }
 }

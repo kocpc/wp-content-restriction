@@ -18,11 +18,17 @@ class WP_Content_Restriction_Settings {
      * @since 0.1
      */
     public static function init() {
+        
         // Build a submenu in Options menu
         add_action( 'admin_menu', array( 'WP_Content_Restriction_Settings', 'build_option_menu' ) );
         
         // Add setting sections
         add_action( 'admin_init', array( 'WP_Content_Restriction_Settings', 'setting_options_handler' ) );
+    
+        // Render profile options
+        add_action( 'show_user_profile', array( 'WP_Content_Restriction_Settings', 'render_user_options' ) );
+        add_action( 'edit_user_profile', array( 'WP_Content_Restriction_Settings', 'render_user_options' ) );
+        
     }
     
     /**
@@ -211,11 +217,11 @@ class WP_Content_Restriction_Settings {
     }
     
     /**
-     * User options render
+     * Render user options
      * 
      * @since 0.1
      */
-    public static function user_options_render() {
+    public static function render_user_options() {
         
     }
     

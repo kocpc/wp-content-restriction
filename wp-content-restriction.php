@@ -37,10 +37,10 @@ define( 'CR_PLUGIN_TEXT_DOMAIN', 'wp-content-restriction' );
 /**
  * Load languages
  */
-function load_textdomain() {
+function load_languages() {
     load_plugin_textdomain( CR_PLUGIN_TEXT_DOMAIN, false, CR_PLUGIN_FILE_BASENAME . '/languages' );
 }
-add_action( 'plugins_loaded', 'load_textdomain' );
+add_action( 'plugins_loaded', 'load_languages' );
 
 /**
  * Import plugin classes.

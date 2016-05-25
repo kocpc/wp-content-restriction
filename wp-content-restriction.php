@@ -21,7 +21,7 @@
 
 // avoid direct access this file 
 if( ! defined( 'ABSPATH' ) ) {
-	die( 'SHAME ON YOU' );
+	die( 'Do not direct access this file.' );
 }
 
 /**

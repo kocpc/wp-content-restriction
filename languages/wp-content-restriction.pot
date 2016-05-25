@@ -5,3 +5,7 @@ msgstr ""
 #. Setting page title
 msgid "WP Content Restriction Settings"
 msgstr ""
+
+#. General options title
+msgid "General Options"
+msgstr ""

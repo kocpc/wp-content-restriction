@@ -14,7 +14,7 @@ class WP_Content_Restriction_Settings_Field {
         $value = get_option( 'wpcr-allow-restrict-self-page' );
         
         // Checkbox whether checked
-        $checked = checked( $value );
+        $checked = checked( $value, true, false );
         
         // Return Element
         echo "<input type='checkbox' name='wpcr-allow-restrict-self-page' value='1' {$checked} /> ";
@@ -28,7 +28,7 @@ class WP_Content_Restriction_Settings_Field {
         $value = get_option( 'wpcr-allow-restrict-all-post' );
         
         // Checkbox whether checked
-        $checked = checked( $value );
+        $checked = checked( $value, true, false );
         
         // Return Element
         echo "<input type='checkbox' name='wpcr-allow-restrict-all-post' value='1' ${checked} /> ";

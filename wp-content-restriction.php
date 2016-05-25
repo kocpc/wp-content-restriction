@@ -35,7 +35,7 @@ define( 'CR_PLUGIN_FILE_BASENAME', pathinfo( __FILE__, PATHINFO_FILENAME ) );
 define( 'CR_PLUGIN_TEXT_DOMAIN', 'wp-content-restriction' );
 
 /**
- * Import plugin classed.
+ * Import plugin classes.
  */
 
 

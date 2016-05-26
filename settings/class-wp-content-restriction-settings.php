@@ -231,7 +231,7 @@ class WP_Content_Restriction_Settings {
         
         // Get current settings value and send to template
         $current_settings = array(
-            'list' => $user->get( 'wpcr-restrict-list' ),
+            'list' => $user->get( 'wpcr-restrict-author-page' ),
             'all' => $user->get( 'wpcr-restrict-all' )
         );
         

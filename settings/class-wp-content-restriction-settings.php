@@ -219,9 +219,24 @@ class WP_Content_Restriction_Settings {
     /**
      * Render user options
      * 
+     * @param object $user Current user information
      * @since 0.1
      */
-    public static function render_user_options() {
+    public static function render_user_options( $user ) {
+        
+        // Check user has edit permission
+        if ( ! current_user_can( 'edit_posts' ) || ! current_user_can( 'edit_pages' ) ) {
+            return false;
+        }
+        
+        // Get current settings value and send to template
+        $current_settings = array(
+            'list' => $user->get( 'wpcr-restrict-list' ),
+            'all' => $user->get( 'wpcr-restrict-all' )
+        );
+        
+        // Render options template
+        include_once( CR_PLUGIN_BASE_FULL . '/settings/template-user-options.php' );
         
     }
     

@@ -33,6 +33,9 @@ class WP_Content_Restriction_Settings {
         add_action( 'personal_options_update', array( 'WP_Content_Restriction_Settings', 'update_user_options' ) );
         add_action( 'edit_user_profile_update', array( 'WP_Content_Restriction_Settings', 'update_user_options' ) );
         
+        // Add meta box to editor
+        add_action( 'add_meta_boxes', array( 'WP_Content_Restriction_Settings', 'meta_boxes_setup' ) );
+        
     }
     
     /**
@@ -273,6 +276,38 @@ class WP_Content_Restriction_Settings {
         } else {
             update_user_meta( $user_id, 'wpcr-restrict-all', false );
         }
+        
+    }
+    
+    /**
+     * Setup meta boxes to editor
+     * 
+     * @since 0.1
+     */
+    public static function meta_boxes_setup() {
+        add_meta_box(
+            'wpcr-meta-box',
+            __( 'Restrict Content', CR_PLUGIN_TEXT_DOMAIN ),
+            array( 'WP_Content_Restriction_Settings', 'render_meta_box' ),
+            null,
+            'side'
+        );
+    }
+    
+    /**
+     * Render meta box
+     * 
+     * @since 0.1
+     */
+    public static function render_meta_box() {
+        
+        global $post;
+        
+        // Current status
+        $current_status = get_post_meta( $post->ID, 'wpcr-enable-restriction', true );
+        
+        // Call the template
+        include_once( CR_PLUGIN_BASE_FULL . '/settings/template-meta-box.php' );
         
     }
     

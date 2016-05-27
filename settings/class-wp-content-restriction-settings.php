@@ -29,6 +29,10 @@ class WP_Content_Restriction_Settings {
         add_action( 'show_user_profile', array( 'WP_Content_Restriction_Settings', 'render_user_options' ) );
         add_action( 'edit_user_profile', array( 'WP_Content_Restriction_Settings', 'render_user_options' ) );
         
+        // Update profile options
+        add_action( 'personal_options_update', array( 'WP_Content_Restriction_Settings', 'update_user_options' ) );
+        add_action( 'edit_user_profile_update', array( 'WP_Content_Restriction_Settings', 'update_user_options' ) );
+        
     }
     
     /**
@@ -237,6 +241,38 @@ class WP_Content_Restriction_Settings {
         
         // Render options template
         include_once( CR_PLUGIN_BASE_FULL . '/settings/template-user-options.php' );
+        
+    }
+    
+    /**
+     * Update user profile options
+     * 
+     * @param int $user_id Currnet user's id
+     * @since 0.1
+     */
+    public static function update_user_options( $user_id ) {
+        
+        // convert user_id to INT
+        $user_id = absint( $user_id );
+        
+        // Check current user can edit post
+        if ( ! current_user_can( 'edit_posts' ) || ! current_user_can( 'edit_pages' ) ) {
+            return false;
+        }
+        
+        // Update wpcr-restrict-author-page
+        if( $_POST['wpcr-restrict-author-page'] ) {
+            update_user_meta( $user_id, 'wpcr-restrict-author-page', true );
+        } else {
+            update_user_meta( $user_id, 'wpcr-restrict-author-page', false );
+        }
+        
+        // Update wpcr-restrict-all
+        if( $_POST['wpcr-restrict-all'] ) {
+            update_user_meta( $user_id, 'wpcr-restrict-all', true );
+        } else {
+            update_user_meta( $user_id, 'wpcr-restrict-all', true );
+        }
         
     }
     

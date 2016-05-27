@@ -15,9 +15,34 @@ class WP_Content_Restriction_Filter {
      * @since 0.1
      */
     public static function init() {
+        
+        // Register shortcode
+        add_action( 'init', array( 'WP_Content_Restriction_Filter', 'register_shortcode_from_list' ) );
+        
+        // Post content filter
         add_action( 'the_post', array( 'WP_Content_Restriction_Filter', 'post_page_content_filter' ) );
+        
     }
     
+    /**
+     * Register shortcode
+     * 
+     * @since 0.1
+     */
+    public static function register_shortcode_from_list() {
+        
+        $shortcode_list = get_option( 'wpcr-shortcode-list', false );
+        
+        foreach( $shortcode_list as $shortcode ) {
+            
+            add_shortcode( $shortcode, function() {
+                return '';
+            });
+            
+        }
+        
+    }
+     
     /**
      * Post / page filter
      * 
@@ -31,22 +56,20 @@ class WP_Content_Restriction_Filter {
             return false;
         }
         
-        // Set post id
-        $post_id = $post->ID;
+        // Check author setting
+        if( self::check_user_option( $post ) ) {
+            return self::enqueue_script_and_style();
+        }
         
-        // Get post meta
-        $current_restrict_status = get_post_meta( $post_id, 'wpcr-enable-restriction', true );
-        
-        // Use post option to enable restrict
-        if( $current_restrict_status ) {
-            return enqueue_script_and_style();
+        // Check post meta
+        if( self::check_post_meta( $post ) ) {
+            return self::enqueue_script_and_style();
         }
         
         // Check the shortcode list
         if( self::check_shortcode_list( $post ) ) {
-            return enqueue_script_and_style();
+            return self::enqueue_script_and_style();
         }
-        
         
     }
     
@@ -56,6 +79,22 @@ class WP_Content_Restriction_Filter {
      * @since 0.1
      */
     public static function enqueue_script_and_style() {
+        wp_enqueue_script( 'thickbox' );
+    }
+    
+    /**
+     * Check post meta
+     * 
+     * @param object $post The post object
+     * @since 0.1
+     */
+    public static function check_post_meta( $post ) {
+        
+        // Set post id
+        $post_id = $post->ID;
+        
+        // Get post meta
+        return get_post_meta( $post_id, 'wpcr-enable-restriction', true );
         
     }
     
@@ -68,10 +107,10 @@ class WP_Content_Restriction_Filter {
     public static function check_shortcode_list( $post ) {
         
         // Get shortcode list
-        $shortcode_list = get_option( 'wpcr-shortcode-list' );
+        $shortcode_list = get_option( 'wpcr-shortcode-list', false );
         
         // If no shortcode list, return back
-        if( ! $shortcode_list ) {
+        if( ! is_array( $shortcode_list ) ) {
             return false;
         }
         
@@ -85,6 +124,23 @@ class WP_Content_Restriction_Filter {
         }
         
         return false;
+        
+    }
+    
+    /**
+     * Check user restriction settings
+     * 
+     * @param object $post The post object
+     * @since 0.1
+     */
+    public static function check_user_option( $post ) {
+        
+        // Get author id and convert to int
+        $author_id = absint( $post->post_author );
+        
+        // Get user setting from user meta and return value
+        return get_user_meta( $author_id, 'wpcr-restrict-all', true );
+        
     }
     
 }

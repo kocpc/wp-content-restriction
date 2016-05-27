@@ -288,6 +288,7 @@ class WP_Content_Restriction_Settings {
      * @since 0.1
      */
     public static function meta_boxes_setup() {
+        
         add_meta_box(
             'wpcr-meta-box',
             __( 'Restrict Content', CR_PLUGIN_TEXT_DOMAIN ),
@@ -295,6 +296,7 @@ class WP_Content_Restriction_Settings {
             null,
             'side'
         );
+        
     }
     
     /**
@@ -324,8 +326,10 @@ class WP_Content_Restriction_Settings {
      */
     public static function update_or_create_post_meta( $post_id ) {
         
+        // Save POST value to $value_to_save
         $value_to_save = $_POST['wpcr-enable-restriction'];
         
+        // Check post value, if has value, update post meta
         if( 1 == $value_to_save ) {
             if( ! add_post_meta( $post_id, 'wpcr-enable-restriction', true, true ) ) {
                 update_post_meta( $post_id, 'wpcr-enable-restriction', true );

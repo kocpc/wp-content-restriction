@@ -36,6 +36,9 @@ class WP_Content_Restriction_Settings {
         // Add meta box to editor
         add_action( 'add_meta_boxes', array( 'WP_Content_Restriction_Settings', 'meta_boxes_setup' ) );
         
+        // Save post meta
+        add_action( 'save_post', array( 'WP_Content_Restriction_Settings', 'update_or_create_post_meta' ) );
+        
     }
     
     /**
@@ -301,13 +304,37 @@ class WP_Content_Restriction_Settings {
      */
     public static function render_meta_box() {
         
+        // Set post id
         global $post;
+        $post_id = $post->ID;
         
         // Current status
-        $current_status = get_post_meta( $post->ID, 'wpcr-enable-restriction', true );
+        $current_status = get_post_meta( $post_id, 'wpcr-enable-restriction', true );
         
         // Call the template
         include_once( CR_PLUGIN_BASE_FULL . '/settings/template-meta-box.php' );
+        
+    }
+    
+    /**
+     * Update post meta
+     * 
+     * @param int $post_id Current post's id
+     * @since 0.1
+     */
+    public static function update_or_create_post_meta( $post_id ) {
+        
+        $value_to_save = $_POST['wpcr-enable-restriction'];
+        
+        if( 1 == $value_to_save ) {
+            if( ! add_post_meta( $post_id, 'wpcr-enable-restriction', true, true ) ) {
+                update_post_meta( $post_id, 'wpcr-enable-restriction', true );
+            }
+        } else {
+            if( ! add_post_meta( $post_id, 'wpcr-enable-restriction', false, true ) ) {
+                update_post_meta( $post_id, 'wpcr-enable-restriction', false );
+            }
+        }
         
     }
     

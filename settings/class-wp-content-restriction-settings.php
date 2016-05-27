@@ -221,6 +221,9 @@ class WP_Content_Restriction_Settings {
         // Explode value
         $input = explode( PHP_EOL, $input );
         
+        // Trim value
+        $input = array_map( 'trim', $input );
+        
         // Return value
         return $input;
         

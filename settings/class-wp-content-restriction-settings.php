@@ -271,7 +271,7 @@ class WP_Content_Restriction_Settings {
         if( $_POST['wpcr-restrict-all'] ) {
             update_user_meta( $user_id, 'wpcr-restrict-all', true );
         } else {
-            update_user_meta( $user_id, 'wpcr-restrict-all', true );
+            update_user_meta( $user_id, 'wpcr-restrict-all', false );
         }
         
     }

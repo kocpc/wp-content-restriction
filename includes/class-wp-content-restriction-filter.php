@@ -35,12 +35,19 @@ class WP_Content_Restriction_Filter {
         
         foreach( $shortcode_list as $shortcode ) {
             
-            add_shortcode( $shortcode, function() {
-                return '';
-            });
+            add_shortcode( $shortcode, array( 'WP_Content_Restriction_Filter', 'shortcode_blank' ) );
             
         }
         
+    }
+    
+    /**
+     * Return blank
+     * 
+     * @since 0.1
+     */
+    public static function shortcode_blank() {
+        return '';
     }
      
     /**

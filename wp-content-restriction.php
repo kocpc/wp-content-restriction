@@ -46,8 +46,10 @@ add_action( 'plugins_loaded', 'load_languages' );
  * Import plugin classes.
  */
 include_once( CR_PLUGIN_BASE_FULL . '/settings/class-wp-content-restriction-settings.php' );
+include_once( CR_PLUGIN_BASE_FULL . '/includes/class-wp-content-restriction-filter.php' );
 
 /**
  * Initial plugin.
  */
 WP_Content_Restriction_Settings::init();
+WP_Content_Restriction_Filter::init();

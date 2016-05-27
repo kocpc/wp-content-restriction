@@ -70,3 +70,19 @@ msgstr ""
 
 msgid "Shortcode List"
 msgstr ""
+
+#. Profile options page
+msgid "Content Restriction"
+msgstr ""
+
+msgid "Restirct Author Page"
+msgstr ""
+
+msgid "Select this option to restrict your author page."
+msgstr ""
+
+msgid "Restrict All Post"
+msgstr ""
+
+msgid "Select this option to restrict all your posts"
+msgstr ""

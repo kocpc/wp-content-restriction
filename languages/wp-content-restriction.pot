@@ -86,3 +86,7 @@ msgstr ""
 
 msgid "Select this option to restrict all your posts"
 msgstr ""
+
+#. On post / page editor
+msgid "Restrict this post"
+msgstr ""

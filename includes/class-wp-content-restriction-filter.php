@@ -131,7 +131,7 @@ class WP_Content_Restriction_Filter {
         add_action( 'wp_footer', array( 'WP_Content_Restriction_Filter', 'render_notice_box_template' ) );
         
         // Load restriction script
-        add_action( 'wp_footer', array( 'WP_Content_Restriction_Filter', 'render_restriction_script' ) );
+        add_action( 'wp_footer', array( 'WP_Content_Restriction_Filter', 'render_restriction_script' ), 100 );
         
     }
     

@@ -6,7 +6,7 @@
 ## Screenshots
 ![Notice box](assets/screenshot-1.png)
 
-## Pre-release feature
+## Pre-release feature (Order by priority)
 * Custom notice box width. (Desktop/Mobile/RWD)
 * Custom mobile advertisement.
 * Do not show again checkbox.
@@ -14,6 +14,8 @@
 * Custom notice box Style (css).
 * Script load from CDN. (option)
 * Custom notice content and title font-size.
+* Enable on homepage.
+* Enable on site.
 
 ## Thanks
 * [電腦王阿達的 3C 胡言亂語](https://www.kocpc.com.tw) : Production environment test.

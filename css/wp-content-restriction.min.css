@@ -23,6 +23,12 @@
     margin-bottom: 30px;
     font-weight: 700;
 }
+.wp-content-restriction-notice-box-content {
+    margin: initial!important;
+}
+.wp-content-restriction-notice-box-body {
+    margin-bottom: 20px;
+}
 .wp-content-restriction-notice-box-accept,
 .wp-content-restriction-notice-box-decline {
     width: 100%;

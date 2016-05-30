@@ -22,5 +22,8 @@ jQuery( document ).ready(function( $ ) {
     };
     var contentRestrictionPopup = new $.Popup( contentRestrictionOption );
     contentRestrictionPopup.open();
+    $('.wp-content-restriction-notice-box-accept').click(function() {
+        contentRestrictionPopup.close();
+    });
 });
 </script>

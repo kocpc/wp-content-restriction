@@ -188,4 +188,16 @@ class WP_Content_Restriction_Filter {
         return include_once( CR_PLUGIN_BASE_FULL . '/includes/template-notice-box.php' );
         
     }
+    
+    /**
+     * Render restriction script
+     * 
+     * @since 0.1
+     */
+    public static function render_restriction_script() {
+        
+        return include_once( CR_PLUGIN_BASE_FULL . '/include/template-restriction-script.php' );
+        
+    }
+    
 }

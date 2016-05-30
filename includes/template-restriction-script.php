@@ -11,3 +11,16 @@ if( 0 >= CR_PLUGIN_VERSION ) {
     return die( 'Do not direct access this file.' );
 }
 ?>
+<script type="text/javascript">
+jQuery( document ).ready(function( $ ) {
+    var contentRestrictionOption = {
+        closeContent: null,
+        backOpacity: "0.9",
+        width: 1000,
+        modal: true,
+        content: $('#wp-content-restriction-notice-box')
+    };
+    var contentRestrictionPopup = new $.Popup( contentRestrictionOption );
+    contentRestrictionPopup.open();
+});
+</script>

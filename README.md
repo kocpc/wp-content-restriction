@@ -7,9 +7,9 @@
 ![Notice box](assets/screenshot-1.png)
 
 ## Pre-release feature (Order by priority)
-* Custom notice box width. (Desktop/Mobile/RWD)
 * Custom mobile advertisement.
 * Do not show again checkbox.
+* Custom notice box width. (Desktop/Mobile/RWD)
 * Custom notice box HTML.
 * Custom notice box Style (css).
 * Script load from CDN. (option)

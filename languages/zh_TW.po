@@ -1,0 +1,116 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh_TW\n"
+
+#. Plugin name
+msgid "WP Content Restriction"
+msgstr "WP 內容限制"
+
+#. Setting page title
+msgid "WP Content Restriction Settings"
+msgstr "WP 內容限制設定"
+
+#. General options title
+msgid "General Options"
+msgstr "一般選項"
+
+#. Setting fields title on general options section
+msgid "Restrict Author Page"
+msgstr "限制作者"
+
+msgid "Restrict All Post by User"
+msgstr "限制使用者的所有文章"
+
+msgid "Messages Box"
+msgstr "訊息方塊"
+
+msgid "Message Title"
+msgstr "訊息標題"
+
+msgid "Message Body"
+msgstr "訊息主體"
+
+msgid "Whether allow users restrict author page himself?"
+msgstr "是否允許使用者限制自己的作者頁面？"
+
+msgid "Whether allow users restrict all him published post?"
+msgstr "是否允許使用者限制所有他發表的文章？"
+
+msgid "Notice message title. Default: Notice"
+msgstr "訊息提醒標題 預設：通知"
+
+msgid "Notice message body content."
+msgstr "訊息提醒主體"
+
+msgid "Custom accept button text. Default: Accept"
+msgstr "自定義接受按鈕上的文字。預設：接受"
+
+msgid "Custom decline button text. Default: Decline"
+msgstr "自定義拒絕按鈕上的文字。預設：拒絕"
+
+msgid "Accept Button"
+msgstr "接受按鈕"
+
+msgid "Decline Button"
+msgstr "拒絕按鈕"
+
+msgid "Custom decline redirect URL. Default: Homepage"
+msgstr "自定義拒絕重新導向URL。預設：首頁"
+
+msgid "Decline Redirect"
+msgstr "拒絕重新導向"
+
+msgid "Advertisement"
+msgstr "廣告"
+
+msgid "Advertise Code"
+msgstr "廣告代碼"
+
+msgid "Multiple shortcode use <Enter> to separate."
+msgstr "多個短代碼用<Enter>分開"
+
+msgid "Use Shortcode Enable Restriction"
+msgstr "使用短代碼啟用限制"
+
+msgid "Shortcode List"
+msgstr "短代碼清單"
+
+#. Profile options page
+msgid "Content Restriction"
+msgstr "內容限制"
+
+msgid "Restirct Author Page"
+msgstr "限制作者頁"
+
+msgid "Select this option to restrict your author page."
+msgstr "選擇此選項可以限制你的作者頁。"
+
+msgid "Restrict All Post"
+msgstr "限制所有文章"
+
+msgid "Select this option to restrict all your posts"
+msgstr "選擇此選項將限制所有的文章"
+
+#. On post / page editor
+msgid "Restrict this post"
+msgstr "限制這篇文章"
+
+#. Notice box
+msgid "Notice"
+msgstr "通知"
+
+msgid "Accept"
+msgstr "接受"
+
+msgid "Decline"
+msgstr "拒絕"

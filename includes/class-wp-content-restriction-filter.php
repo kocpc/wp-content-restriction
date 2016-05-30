@@ -231,7 +231,7 @@ class WP_Content_Restriction_Filter {
         $value = array(
             'title'     => $options['title']    ? $options['title']     : __( 'Notice', CR_PLUGIN_TEXT_DOMAIN ),
             'body'      => $options['body']     ? $options['body']      : null,
-            'accept'    => $options['accept']   ? $options['accept']    : __( 'Accpet', CR_PLUGIN_TEXT_DOMAIN ),
+            'accept'    => $options['accept']   ? $options['accept']    : __( 'Accept', CR_PLUGIN_TEXT_DOMAIN ),
             'decline'   => $options['decline']  ? $options['decline']   : __( 'Decline', CR_PLUGIN_TEXT_DOMAIN ),
             'redirect'  => $options['redirect'] ? $options['redirect']  : get_home_url(),
             'ad'        => $options['ad']       ? $options['ad']        : null

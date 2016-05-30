@@ -242,6 +242,14 @@ class WP_Content_Restriction_Settings {
             return false;
         }
         
+        // Check global settings
+        $allowed_restrict_archive = get_option( 'wpcr-allow-restrict-self-page' );
+        $allowed_restrict_all = get_option( 'wpcr-allow-restrict-all-post' );
+        
+        if( ! $allowed_restrict_archive && ! $allowed_restrict_all ) {
+            return false;
+        }
+        
         // Get current settings value and send to template
         $current_settings = array(
             'list' => $user->get( 'wpcr-restrict-author-page' ),

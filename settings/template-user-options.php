@@ -13,6 +13,7 @@ if( 0 >= CR_PLUGIN_VERSION ) {
 ?>
 <h2><?php _e( 'Content Restriction', CR_PLUGIN_TEXT_DOMAIN ) ?></h2>
 <table class="form-table">
+    <?php if( $allowed_restrict_archive ): ?>
     <tr>
         <th>
             <label><?php _e( 'Restirct Author Page', CR_PLUGIN_TEXT_DOMAIN ) ?></label>
@@ -22,6 +23,8 @@ if( 0 >= CR_PLUGIN_VERSION ) {
             <span> <?php _e( 'Select this option to restrict your author page.', CR_PLUGIN_TEXT_DOMAIN ) ?></span>
         </td>
     </tr>
+    <?php endif; ?>
+    <?php if( $allowed_restrict_all ): ?>
     <tr>
         <th>
             <label><?php _e( 'Restrict All Post', CR_PLUGIN_TEXT_DOMAIN ) ?></label>
@@ -31,4 +34,5 @@ if( 0 >= CR_PLUGIN_VERSION ) {
             <span> <?php _e( 'Select this option to restrict all your posts', CR_PLUGIN_TEXT_DOMAIN ) ?></span>
         </td>
     </tr>
+    <?php endif; ?>
 </table>

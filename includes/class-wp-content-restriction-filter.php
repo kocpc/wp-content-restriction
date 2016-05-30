@@ -93,7 +93,7 @@ class WP_Content_Restriction_Filter {
         wp_enqueue_style( 'toddish-popup', plugins_url( '/css/popup.min.css', CR_PLUGIN_PATH_FULL ), null, '2.2.3' );
         
         // Import WP Content Restriction stylesheet
-        wp_enqueue_style( 'wp-content-restriction', plugins_url( '/css/wp-content-restriction.min.css', CR_PLUGIN_PATH_FULL ), null, '0.1' );
+        wp_enqueue_style( 'wp-content-restriction', plugins_url( '/css/wp-content-restriction.min.css', CR_PLUGIN_PATH_FULL ), null, CR_PLUGIN_VERSION );
     }
     
     /**

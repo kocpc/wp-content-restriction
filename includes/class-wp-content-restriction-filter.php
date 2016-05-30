@@ -157,4 +157,14 @@ class WP_Content_Restriction_Filter {
         
     }
     
+    /**
+     * Render notice box template
+     * 
+     * @since 0.1
+     */
+    public static function render_notice_box_template() {
+        
+        return include_once( CR_PLUGIN_BASE_FULL . '/includes/template-notice-box.php' );
+        
+    }
 }

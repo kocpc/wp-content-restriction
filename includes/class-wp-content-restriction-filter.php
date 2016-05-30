@@ -87,10 +87,10 @@ class WP_Content_Restriction_Filter {
      */
     public static function enqueue_script_and_style() {
         // Import Toddish popup library with jQuery (depend)
-        wp_enqueue_script( 'toddish-popup', CR_PLUGIN_BASE_RELATIVE . '/js/jquery.popup.min.js', array( 'jquery' ) );
+        wp_enqueue_script( 'toddish-popup', plugins_url( '/js/jquery.popup.min.js', CR_PLUGIN_PATH_FULL ), array( 'jquery' ) );
         
         // Import Toddish popup style
-        wp_enqueue_style( 'toddish-popup', CR_PLUGIN_BASE_RELATIVE . '/css/popup.min.css' );
+        wp_enqueue_style( 'toddish-popup', plugins_url( '/css/popup.min.css', CR_PLUGIN_PATH_FULL ) );
     }
     
     /**

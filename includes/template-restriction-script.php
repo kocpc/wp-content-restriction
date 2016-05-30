@@ -18,7 +18,7 @@ jQuery( document ).ready(function( $ ) {
         backOpacity: '0.9',
         width: '100%',
         modal: true,
-        content: $('#wp-content-restriction-notice-box')
+        content: $('.wp-content-restriction-notice-box')
     };
     var contentRestrictionPopup = new $.Popup( contentRestrictionOption );
     contentRestrictionPopup.open();

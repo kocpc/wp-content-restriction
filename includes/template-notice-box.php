@@ -16,7 +16,8 @@ if( 0 >= CR_PLUGIN_VERSION ) {
         <p class="wp-content-restriction-notice-box-title"><?php echo $value['title'] ?></p>
     </div>
     <div class="wp-content-restriction-notice-box-body">
-        <p class="wp-content-restriction-notice-box-content"><?php echo $value['body'] ?></p>
+        <div class="wp-content-restriction-notice-box-content"><?php echo $value['body'] ?></div>
+        <div class="wp-content-restriction-notice-box-a-d"><?php echo $value['ad'] ?></div>
     </div>
     <div class="wp-content-restriction-notice-box-footer">
         <button class="wp-content-restriction-notice-box-accept wp-content-restriction-button"><?php echo $value['accept'] ?></button>

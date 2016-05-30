@@ -23,7 +23,7 @@
 All change log on this repo release list: [https://github.com/chown9835/wp-content-restriction/releases](https://github.com/chown9835/wp-content-restriction/releases)
 
 ## Thanks
-* Shen Cheng Ta : Concept generation.
+* [Shen Cheng Ta](https://www.facebook.com/kocpc) : Concept generation.
 * [電腦王阿達的 3C 胡言亂語](https://www.kocpc.com.tw) : Production environment test.
-* Chris Chang : Translation.
+* [Chris Chang](https://github.com/chris1004tw) : Translation.
 * [WordPress](https://wordpress.com/) : Awesome platform for blogging.

@@ -36,6 +36,10 @@ class WP_Content_Restriction_Filter {
         
         $shortcode_list = get_option( 'wpcr-shortcode-list', false );
         
+        if( ! $shortcode_list ) {
+            return false;
+        }
+        
         foreach( $shortcode_list as $shortcode ) {
             
             add_shortcode( $shortcode, array( 'WP_Content_Restriction_Filter', 'shortcode_blank' ) );

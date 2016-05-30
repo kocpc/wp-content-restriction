@@ -99,6 +99,13 @@ class WP_Content_Restriction_Filter {
             return false;
         }
         
+        // Check general option
+        $allowed_restrict_archive = get_option( 'wpcr-allow-restrict-self-page' );
+        
+        if( ! $allowed_restrict_archive ) {
+            return false;
+        }
+        
         // Get author id
         $author_id = get_the_author_meta( 'ID' );
         

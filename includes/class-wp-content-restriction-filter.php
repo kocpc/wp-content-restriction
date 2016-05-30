@@ -87,13 +87,13 @@ class WP_Content_Restriction_Filter {
      */
     public static function enqueue_script_and_style() {
         // Import Toddish popup library with jQuery (depend)
-        wp_enqueue_script( 'toddish-popup', plugins_url( '/js/jquery.popup.min.js', CR_PLUGIN_PATH_FULL ), array( 'jquery' ) );
+        wp_enqueue_script( 'toddish-popup', plugins_url( '/js/jquery.popup.min.js', CR_PLUGIN_PATH_FULL ), array( 'jquery' ), '2.2.3' );
         
         // Import Toddish popup style
-        wp_enqueue_style( 'toddish-popup', plugins_url( '/css/popup.min.css', CR_PLUGIN_PATH_FULL ) );
+        wp_enqueue_style( 'toddish-popup', plugins_url( '/css/popup.min.css', CR_PLUGIN_PATH_FULL ), null, '2.2.3' );
         
         // Import WP Content Restriction stylesheet
-        wp_enqueue_style( 'wp-content-restriction', plugins_url( '/css/wp-content-restriction.min.css', CR_PLUGIN_PATH_FULL ) );
+        wp_enqueue_style( 'wp-content-restriction', plugins_url( '/css/wp-content-restriction.min.css', CR_PLUGIN_PATH_FULL ), null, '0.1' );
     }
     
     /**

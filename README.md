@@ -25,4 +25,5 @@ All change log on this repo release list: [https://github.com/chown9835/wp-conte
 ## Thanks
 * Shen Cheng Ta : Concept generation.
 * [電腦王阿達的 3C 胡言亂語](https://www.kocpc.com.tw) : Production environment test.
+* Chris Chang : Translation.
 * [WordPress](https://wordpress.com/) : Awesome platform for blogging.

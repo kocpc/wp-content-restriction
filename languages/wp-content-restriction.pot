@@ -90,3 +90,13 @@ msgstr ""
 #. On post / page editor
 msgid "Restrict this post"
 msgstr ""
+
+#. Notice box
+msgid "Notice"
+msgstr ""
+
+msgid "Accept"
+msgstr ""
+
+msgid "Decline"
+msgstr ""

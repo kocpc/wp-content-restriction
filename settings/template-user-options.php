@@ -16,7 +16,7 @@ if( 0 >= CR_PLUGIN_VERSION ) {
     <?php if( $allowed_restrict_archive ): ?>
     <tr>
         <th>
-            <label><?php _e( 'Restirct Author Page', CR_PLUGIN_TEXT_DOMAIN ) ?></label>
+            <label><?php _e( 'Restrict Author Page', CR_PLUGIN_TEXT_DOMAIN ) ?></label>
         </th>
         <td>
             <input type="checkbox" name="wpcr-restrict-author-page" value="1" <?php echo ( $current_settings['list'] ? 'checked' : null ) ?> />

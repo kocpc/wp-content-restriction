@@ -23,7 +23,9 @@
     margin-bottom: 30px;
     font-weight: 700;
 }
-.wp-content-restriction-notice-box-content {
+.wp-content-restriction-notice-box-content,
+.wp-content-restriction-notice-box-title {
+    padding: initial!important;
     margin: initial!important;
     font-size: 0.9rem;
 }

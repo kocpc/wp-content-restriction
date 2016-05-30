@@ -164,6 +164,24 @@ class WP_Content_Restriction_Filter {
      */
     public static function render_notice_box_template() {
         
+        // Get global options
+        $options = array(
+            'title'     => get_option( 'wpcr-message-title' ),
+            'body'      => get_option( 'wpcr-message-body' ),
+            'accept'    => get_option( 'wpcr-accept-button' ),
+            'decline'   => get_option( 'wpcr-decline-button' ),
+            'redirect'  => get_option( 'wpcr-decline-redirect' )
+        );
+        
+        // Set value for render
+        $value = array(
+            'title'     => $options['title']    ? $options['title']     : __( 'Notice', CR_PLUGIN_TEXT_DOMAIN ),
+            'body'      => $options['body']     ? $options['body']      : null,
+            'accept'    => $options['accept']   ? $options['accept']    : __( 'Accpet', CR_PLUGIN_TEXT_DOMAIN ),
+            'decline'   => $options['decline']  ? $options['decline']   : __( 'Decline', CR_PLUGIN_TEXT_DOMAIN ),
+            'redirect'  => $options['redirect'] ? $options['redirect']  : get_home_url()
+        );
+        
         return include_once( CR_PLUGIN_BASE_FULL . '/includes/template-notice-box.php' );
         
     }

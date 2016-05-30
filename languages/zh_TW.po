@@ -90,7 +90,7 @@ msgid "Content Restriction"
 msgstr "內容限制"
 
 msgid "Restirct Author Page"
-msgstr "限制作者頁"
+msgstr ""
 
 msgid "Select this option to restrict your author page."
 msgstr "選擇此選項可以限制你的作者頁。"

@@ -25,6 +25,7 @@
 }
 .wp-content-restriction-notice-box-content {
     margin: initial!important;
+    font-size: 0.9rem;
 }
 .wp-content-restriction-notice-box-body {
     margin-bottom: 20px;

@@ -27,6 +27,8 @@
 .wp-content-restriction-notice-box-title {
     padding: initial!important;
     margin: initial!important;
+}
+.wp-content-restriction-notice-box-content {
     font-size: 0.9rem;
 }
 .wp-content-restriction-notice-box-body {

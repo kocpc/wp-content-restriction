@@ -75,9 +75,6 @@ msgstr ""
 msgid "Content Restriction"
 msgstr ""
 
-msgid "Restirct Author Page"
-msgstr ""
-
 msgid "Select this option to restrict your author page."
 msgstr ""
 

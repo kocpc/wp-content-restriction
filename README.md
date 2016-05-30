@@ -19,6 +19,10 @@
 * Enable on homepage.
 * Enable on site.
 
+## Change Log
+### v0.1
+First release.
+
 ## Thanks
 * [電腦王阿達的 3C 胡言亂語](https://www.kocpc.com.tw) : Production environment test.
 * [WordPress](https://wordpress.com/) : Awesome platform for blogging.

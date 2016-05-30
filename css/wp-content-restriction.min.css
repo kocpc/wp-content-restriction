@@ -1,13 +1,189 @@
 .wp-content-restriction-content {
     max-width: 1000px;
+    position: fixed;
+    z-index: 102;
 }
 .wp-content-restriction-notice-box {
     display: none;
 }
-.wp-content-restriction-notice-box-header {
+.wp-content.restriction-notice-box-header,
+.wp-content-restriction-notice-box-body,
+.wp-content-restriction-notice-box-footer,
+.wp-content-restriction-notice-box-title {
+    font-family: 'Noto Sans', sans-serif!important;
+}
+.wp-content.restriction-notice-box-header,
+.wp-content-restriction-notice-box-body {
+    font-weight: 400;
+}
+.wp-content-restriction-notice-box-title {
     font-size: 1.5rem;
     text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
 }
-.wp-content-restriction-notice-box-accept, .wp-content-restriction-notice-box-decline {
+.wp-content-restriction-notice-box-accept,
+.wp-content-restriction-notice-box-decline {
     width: 100%;
+}
+.wp-content-restriction-button {
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 8px 12px;
+    font-size: 15px;
+    line-height: 1.4;
+    border-radius: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: 400;
+}
+.wp-content-restriction-button:last-child {
+    margin-top: 10px;
+}
+.wp-content-restriction-button:focus,
+.wp-content-restriction-button:active:focus,
+.wp-content-restriction-button.active:focus,
+.wp-content-restriction-button.focus,
+.wp-content-restriction-button:active.focus,
+.wp-content-restriction-button.active.focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+.wp-content-restriction-button:hover,
+.wp-content-restriction-button:focus,
+.wp-content-restriction-button.focus {
+    color: #333333;
+    text-decoration: none;
+}
+.wp-content-restriction-button:active,
+.wp-content-restriction-button.active {
+    outline: 0;
+    background-image: none;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.wp-content-restriction-notice-box-accept {
+    color: #ffffff;
+    background-color: #43ac6a;
+    border-color: #3c9a5f;
+}
+.wp-content-restriction-notice-box-accept:focus,
+.wp-content-restriction-notice-box-accept.focus {
+    color: #ffffff;
+    background-color: #358753;
+    border-color: #183e26;
+}
+.wp-content-restriction-notice-box-accept:hover {
+    color: #ffffff;
+    background-color: #358753;
+    border-color: #2b6e44;
+}
+.wp-content-restriction-notice-box-accept:active,
+.wp-content-restriction-notice-box-accept.active,
+.open > .dropdown-toggle.wp-content-restriction-notice-box-accept {
+    color: #ffffff;
+    background-color: #358753;
+    border-color: #2b6e44;
+}
+.wp-content-restriction-notice-box-accept:active:hover,
+.wp-content-restriction-notice-box-accept.active:hover,
+.open > .dropdown-toggle.wp-content-restriction-notice-box-accept:hover,
+.wp-content-restriction-notice-box-accept:active:focus,
+.wp-content-restriction-notice-box-accept.active:focus,
+.open > .dropdown-toggle.wp-content-restriction-notice-box-accept:focus,
+.wp-content-restriction-notice-box-accept:active.focus,
+.wp-content-restriction-notice-box-accept.active.focus,
+.open > .dropdown-toggle.wp-content-restriction-notice-box-accept.focus {
+    color: #ffffff;
+    background-color: #2b6e44;
+    border-color: #183e26;
+}
+.wp-content-restriction-notice-box-accept:active,
+.wp-content-restriction-notice-box-accept.active,
+.open > .dropdown-toggle.wp-content-restriction-notice-box-accept {
+    background-image: none;
+}
+.wp-content-restriction-notice-box-accept.disabled:hover,
+.wp-content-restriction-notice-box-accept[disabled]:hover,
+fieldset[disabled] .wp-content-restriction-notice-box-accept:hover,
+.wp-content-restriction-notice-box-accept.disabled:focus,
+.wp-content-restriction-notice-box-accept[disabled]:focus,
+fieldset[disabled] .wp-content-restriction-notice-box-accept:focus,
+.wp-content-restriction-notice-box-accept.disabled.focus,
+.wp-content-restriction-notice-box-accept[disabled].focus,
+fieldset[disabled] .wp-content-restriction-notice-box-accept.focus {
+    background-color: #43ac6a;
+    border-color: #3c9a5f;
+}
+.wp-content-restriction-notice-box-accept .badge {
+    color: #43ac6a;
+    background-color: #ffffff;
+}
+.wp-content-restriction-notice-box-decline {
+    color: #ffffff;
+    background-color: #e99002;
+    border-color: #d08002;
+}
+.wp-content-restriction-notice-box-decline:focus,
+.wp-content-restriction-notice-box-decline.focus {
+    color: #ffffff;
+    background-color: #b67102;
+    border-color: #513201;
+}
+.wp-content-restriction-notice-box-decline:hover {
+    color: #ffffff;
+    background-color: #b67102;
+    border-color: #935b01;
+}
+.wp-content-restriction-notice-box-decline:active,
+.wp-content-restriction-notice-box-decline.active,
+.open > .dropdown-toggle.wp-content-restriction-notice-box-decline {
+    color: #ffffff;
+    background-color: #b67102;
+    border-color: #935b01;
+}
+.wp-content-restriction-notice-box-decline:active:hover,
+.wp-content-restriction-notice-box-decline.active:hover,
+.open > .dropdown-toggle.wp-content-restriction-notice-box-decline:hover,
+.wp-content-restriction-notice-box-decline:active:focus,
+.wp-content-restriction-notice-box-decline.active:focus,
+.open > .dropdown-toggle.wp-content-restriction-notice-box-decline:focus,
+.wp-content-restriction-notice-box-decline:active.focus,
+.wp-content-restriction-notice-box-decline.active.focus,
+.open > .dropdown-toggle.wp-content-restriction-notice-box-decline.focus {
+    color: #ffffff;
+    background-color: #935b01;
+    border-color: #513201;
+}
+.wp-content-restriction-notice-box-decline:active,
+.wp-content-restriction-notice-box-decline.active,
+.open > .dropdown-toggle.wp-content-restriction-notice-box-decline {
+    background-image: none;
+}
+.wp-content-restriction-notice-box-decline.disabled:hover,
+.wp-content-restriction-notice-box-decline[disabled]:hover,
+fieldset[disabled] .wp-content-restriction-notice-box-decline:hover,
+.wp-content-restriction-notice-box-decline.disabled:focus,
+.wp-content-restriction-notice-box-decline[disabled]:focus,
+fieldset[disabled] .wp-content-restriction-notice-box-decline:focus,
+.wp-content-restriction-notice-box-decline.disabled.focus,
+.wp-content-restriction-notice-box-decline[disabled].focus,
+fieldset[disabled] .wp-content-restriction-notice-box-decline.focus {
+    background-color: #e99002;
+    border-color: #d08002;
+}
+.wp-content-restriction-notice-box-decline .badge {
+    color: #e99002;
+    background-color: #ffffff;
 }

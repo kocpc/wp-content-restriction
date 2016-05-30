@@ -20,8 +20,7 @@
 * Enable on site.
 
 ## Change Log
-### v0.1
-First release.
+All change log on this repo release list: [https://github.com/chown9835/wp-content-restriction/releases](https://github.com/chown9835/wp-content-restriction/releases)
 
 ## Thanks
 * [電腦王阿達的 3C 胡言亂語](https://www.kocpc.com.tw) : Production environment test.

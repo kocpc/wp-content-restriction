@@ -86,7 +86,11 @@ class WP_Content_Restriction_Filter {
      * @since 0.1
      */
     public static function enqueue_script_and_style() {
-        wp_enqueue_script( 'thickbox' );
+        // Import Toddish popup library with jQuery (depend)
+        wp_enqueue_script( 'toddish-popup', CR_PLUGIN_BASE_RELATIVE . '/js/jquery.popup.min.js', array( 'jquery' ) );
+        
+        // Import Toddish popup style
+        wp_enqueue_style( 'toddish-popup', CR_PLUGIN_BASE_RELATIVE . '/css/popup.min.css' );
     }
     
     /**

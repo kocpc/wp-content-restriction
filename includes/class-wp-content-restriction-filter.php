@@ -94,6 +94,9 @@ class WP_Content_Restriction_Filter {
         
         // Import WP Content Restriction stylesheet
         wp_enqueue_style( 'wp-content-restriction', plugins_url( '/css/wp-content-restriction.min.css', CR_PLUGIN_PATH_FULL ), null, CR_PLUGIN_VERSION );
+        
+        // Load notice box template
+        add_action( 'wp_footer', array( 'WP_Content_Restriction_Filter', 'render_notice_box_template' ) );
     }
     
     /**

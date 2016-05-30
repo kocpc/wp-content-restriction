@@ -15,8 +15,9 @@ if( 0 >= CR_PLUGIN_VERSION ) {
 jQuery( document ).ready(function( $ ) {
     var contentRestrictionOption = {
         closeContent: null,
-        backOpacity: "0.9",
-        width: 1000,
+        backOpacity: '0.9',
+        contentClass: 'wp-content-restriction-content',
+        width: '100%',
         modal: true,
         content: $('#wp-content-restriction-notice-box')
     };

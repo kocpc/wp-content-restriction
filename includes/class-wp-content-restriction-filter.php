@@ -205,7 +205,8 @@ class WP_Content_Restriction_Filter {
             'body'      => get_option( 'wpcr-message-body' ),
             'accept'    => get_option( 'wpcr-accept-button' ),
             'decline'   => get_option( 'wpcr-decline-button' ),
-            'redirect'  => get_option( 'wpcr-decline-redirect' )
+            'redirect'  => get_option( 'wpcr-decline-redirect' ),
+            'ad'        => get_option( 'wpcr-advertisement-code' )
         );
         
         // Set value for render
@@ -214,7 +215,8 @@ class WP_Content_Restriction_Filter {
             'body'      => $options['body']     ? $options['body']      : null,
             'accept'    => $options['accept']   ? $options['accept']    : __( 'Accpet', CR_PLUGIN_TEXT_DOMAIN ),
             'decline'   => $options['decline']  ? $options['decline']   : __( 'Decline', CR_PLUGIN_TEXT_DOMAIN ),
-            'redirect'  => $options['redirect'] ? $options['redirect']  : get_home_url()
+            'redirect'  => $options['redirect'] ? $options['redirect']  : get_home_url(),
+            'ad'        => $options['ad']       ? $options['ad']        : null
         );
         
         return include_once( CR_PLUGIN_BASE_FULL . '/includes/template-notice-box.php' );

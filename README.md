@@ -4,6 +4,7 @@
 ## Installation
 
 ## Screenshots
+![Notice box](assets/screenshot-1.png)
 
 ## Pre-release feature
 * Custom notice box width. (Desktop/Mobile/RWD)

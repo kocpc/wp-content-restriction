@@ -10,6 +10,7 @@
 * Custom notice box HTML.
 * Custom notice box Style (css).
 * Script load from CDN. (option)
+* Custom notice content and title font-size.
 
 ## Thanks
 * [WordPress](https://wordpress.com/) : Awesome platform for blogging.

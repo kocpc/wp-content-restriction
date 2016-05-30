@@ -97,6 +97,10 @@ class WP_Content_Restriction_Filter {
         
         // Load notice box template
         add_action( 'wp_footer', array( 'WP_Content_Restriction_Filter', 'render_notice_box_template' ) );
+        
+        // Load restriction script
+        add_action( 'wp_footer', array( 'WP_Content_Restriction_Filter', 'render_restriction_script' ) );
+        
     }
     
     /**
@@ -196,7 +200,7 @@ class WP_Content_Restriction_Filter {
      */
     public static function render_restriction_script() {
         
-        return include_once( CR_PLUGIN_BASE_FULL . '/include/template-restriction-script.php' );
+        return include_once( CR_PLUGIN_BASE_FULL . '/includes/template-restriction-script.php' );
         
     }
     

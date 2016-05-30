@@ -9,6 +9,7 @@
 ## Pre-release feature
 * Custom notice box width. (Desktop/Mobile/RWD)
 * Custom mobile advertisement.
+* Do not show again checkbox.
 * Custom notice box HTML.
 * Custom notice box Style (css).
 * Script load from CDN. (option)

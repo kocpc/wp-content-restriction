@@ -195,6 +195,13 @@ class WP_Content_Restriction_Filter {
      */
     public static function check_user_option( $post ) {
         
+        // Check global setting
+        $allowed_restrict_all = get_option( 'wpcr-allow-restrict-all-post' );
+        
+        if( ! $allowed_restrict_all ) {
+            return false;
+        }
+        
         // Get author id and convert to int
         $author_id = absint( $post->post_author );
         

@@ -1,3 +1,13 @@
-#wp-content-restriction-notice-box {
+.wp-content-restriction-content {
+    max-width: 1000px;
+}
+.wp-content-restriction-notice-box {
     display: none;
+}
+.wp-content-restriction-notice-box-header {
+    font-size: 1.5rem;
+    text-align: center;
+}
+.wp-content-restriction-notice-box-accept, .wp-content-restriction-notice-box-decline {
+    width: 100%;
 }

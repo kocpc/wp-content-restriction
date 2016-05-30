@@ -19,6 +19,9 @@ class WP_Content_Restriction_Filter {
         // Register shortcode
         add_action( 'init', array( 'WP_Content_Restriction_Filter', 'register_shortcode_from_list' ) );
         
+        // Check author archive page
+        add_action( 'loop_start', array( 'WP_Content_Restriction_Filter', 'author_archive_page_filter' ) );
+        
         // Post content filter
         add_action( 'the_post', array( 'WP_Content_Restriction_Filter', 'post_page_content_filter' ) );
         
@@ -75,6 +78,28 @@ class WP_Content_Restriction_Filter {
         
         // Check the shortcode list
         if( self::check_shortcode_list( $post ) ) {
+            return self::enqueue_script_and_style();
+        }
+        
+    }
+    
+    /**
+     * Author archive page filter
+     * 
+     * @since 0.1
+     */
+    public static function author_archive_page_filter() {
+        
+        // Check if not author archive page, return
+        if( ! is_author() ) {
+            return false;
+        }
+        
+        // Get author id
+        $author_id = get_the_author_meta( 'ID' );
+        
+        // Check user option
+        if( get_user_meta( $author_id, 'wpcr-restrict-author-page', true ) ) {
             return self::enqueue_script_and_style();
         }
         

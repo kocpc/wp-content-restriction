@@ -2,6 +2,13 @@
 ⛔ You can use this plugin to show up notice on article / page. Like "Cookie Notice" or "Adult Content Notice".
 
 ## Installation
+This plugin now is available on WordPress.org: [https://wordpress.org/plugins/wp-content-restriction/](https://wordpress.org/plugins/wp-content-restriction/)
+
+1. Go WordPress.org download this plugin, and upload to WP Admin.
+1. Active plugin.
+1. Go settings > WP Content Restriction setup it.
+1. Go article editor, if your want enable restriction on that article, check Right side "Restriction this post" checkbox.
+1. Save post and check it.
 
 ## Screenshots
 ![Notice box](assets/screenshot-1.png)

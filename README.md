@@ -4,6 +4,7 @@
 [![Plugin Version](https://img.shields.io/wordpress/plugin/v/wp-content-restriction.svg?style=flat-square)](https://wordpress.org/plugins/wp-content-restriction/)
 [![Latest tested on WordPress](https://img.shields.io/wordpress/v/wp-content-restriction.svg?style=flat-square)](https://wordpress.org/plugins/wp-content-restriction/)
 [![License](https://img.shields.io/packagist/l/rilwis/wp-content-restriction.svg?style=flat-square)](https://wordpress.org/plugins/wp-content-restriction/)
+[![Stories in Ready](https://badge.waffle.io/kocpc/wp-content-restriction.svg?label=ready&title=Ready)](http://waffle.io/kocpc/wp-content-restriction)
 
 ⛔ You can use this plugin to show up notice on article / page. Like "Cookie Notice" or "Adult Content Notice".
 

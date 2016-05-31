@@ -1,4 +1,10 @@
 # WP Content Restriction
+[![Stars](https://img.shields.io/wordpress/plugin/r/wp-content-restriction.svg?style=flat-square)](http://wordpress.org/plugins/wp-content-restriction/)
+[![Total Downloads](https://img.shields.io/wordpress/plugin/dt/wp-content-restriction.svg?style=flat-square)](http://wordpress.org/plugins/wp-content-restriction/)
+[![Plugin Version](https://img.shields.io/wordpress/plugin/v/wp-content-restriction.svg?style=flat-square)](https://wordpress.org/plugins/wp-content-restriction/)
+[![Latest tested on WordPress](https://img.shields.io/wordpress/v/wp-content-restriction.svg?style=flat-square)](https://wordpress.org/plugins/wp-content-restriction/)
+[![License](https://img.shields.io/packagist/l/rilwis/wp-content-restriction.svg?style=flat-square)](https://wordpress.org/plugins/wp-content-restriction/)
+
 ⛔ You can use this plugin to show up notice on article / page. Like "Cookie Notice" or "Adult Content Notice".
 
 ## Installation

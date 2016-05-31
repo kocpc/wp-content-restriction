@@ -1,10 +1,10 @@
 # WP Content Restriction
-[![Stars](https://img.shields.io/wordpress/plugin/r/wp-content-restriction.svg)](http://wordpress.org/plugins/wp-content-restriction/)
-[![Total Downloads](https://img.shields.io/wordpress/plugin/dt/wp-content-restriction.svg)](http://wordpress.org/plugins/wp-content-restriction/)
-[![Plugin Version](https://img.shields.io/wordpress/plugin/v/wp-content-restriction.svg)](https://wordpress.org/plugins/wp-content-restriction/)
-[![Latest tested on WordPress](https://img.shields.io/wordpress/v/wp-content-restriction.svg)](https://wordpress.org/plugins/wp-content-restriction/)
-[![License](https://img.shields.io/packagist/l/rilwis/wp-content-restriction.svg)](https://wordpress.org/plugins/wp-content-restriction/)
-[![Stories in Ready](https://badge.waffle.io/kocpc/wp-content-restriction.svg?label=ready&title=Todo)](http://waffle.io/kocpc/wp-content-restriction)
+[![Stars](https://img.shields.io/wordpress/plugin/r/wp-content-restriction.svg?style=flat-square)](http://wordpress.org/plugins/wp-content-restriction/)
+[![Total Downloads](https://img.shields.io/wordpress/plugin/dt/wp-content-restriction.svg?style=flat-square)](http://wordpress.org/plugins/wp-content-restriction/)
+[![Plugin Version](https://img.shields.io/wordpress/plugin/v/wp-content-restriction.svg?style=flat-square)](https://wordpress.org/plugins/wp-content-restriction/)
+[![Latest tested on WordPress](https://img.shields.io/wordpress/v/wp-content-restriction.svg?style=flat-square)](https://wordpress.org/plugins/wp-content-restriction/)
+[![License](https://img.shields.io/packagist/l/rilwis/wp-content-restriction.svg?style=flat-square)](https://wordpress.org/plugins/wp-content-restriction/)
+[![To-do](https://img.shields.io/waffle/label/kocpc/wp-content-restriction/to-do.svg?style=flat-square)](https://waffle.io/kocpc/wp-content-restriction)
 
 ⛔ You can use this plugin to show up notice on article / page. Like "Cookie Notice" or "Adult Content Notice".
 
@@ -21,10 +21,10 @@ This plugin now is available on WordPress.org: [https://wordpress.org/plugins/wp
 ![Notice box](assets/screenshot-1.png)
 
 ## Todos
-Todo list: [Issues with Ready label on Github](https://github.com/kocpc/wp-content-restriction/issues?q=is%3Aissue+is%3Aopen+label%3Aready)
+Todo list: [Issues with Ready label on Github](https://github.com/kocpc/wp-content-restriction/issues?q=is%3Aissue+is%3Aopen+label%3Ato-do)
 
 ## Change Log
-All change log on this repo release list: [https://github.com/chown9835/wp-content-restriction/releases](https://github.com/chown9835/wp-content-restriction/releases)
+All change log on this repo release list: [https://github.com/chown9835/wp-content-restriction/releases](https://github.com/kocpc/wp-content-restriction/releases)
 
 ## Thanks
 * [Shen Cheng Ta](https://www.facebook.com/kocpc) : Concept generation.

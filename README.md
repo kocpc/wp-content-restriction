@@ -20,18 +20,8 @@ This plugin now is available on WordPress.org: [https://wordpress.org/plugins/wp
 ## Screenshots
 ![Notice box](assets/screenshot-1.png)
 
-## Pre-release feature (Order by priority)
-* Custom mobile advertisement.
-* Do not show again checkbox.
-* Custom notice box width. (Desktop/Mobile/RWD)
-* Enable to show "I <3 WP Content Restriction"
-* Custom title/body/button color.
-* Custom notice box HTML.
-* Custom notice box Style (css).
-* Script load from CDN. (option)
-* Custom notice content and title font-size.
-* Enable on homepage.
-* Enable on site.
+## Todos
+Todo list: [Issues with Ready label on Github](https://github.com/kocpc/wp-content-restriction/issues?q=is%3Aissue+is%3Aopen+label%3Aready)
 
 ## Change Log
 All change log on this repo release list: [https://github.com/chown9835/wp-content-restriction/releases](https://github.com/chown9835/wp-content-restriction/releases)

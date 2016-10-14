@@ -84,6 +84,9 @@ msgstr ""
 msgid "Select this option to restrict all your posts"
 msgstr ""
 
+msgid "You can put your advertisement code or tracking code here."
+msgstr ""
+
 #. On post / page editor
 msgid "Restrict this post"
 msgstr ""

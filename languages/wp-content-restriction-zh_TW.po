@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.7\n"
-"Last-Translator: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Language: zh_TW\n"
 
 #. Plugin name
 msgid "WP Content Restriction"
@@ -32,13 +32,13 @@ msgid "Restrict All Post by User"
 msgstr "限制使用者的所有文章"
 
 msgid "Messages Box"
-msgstr "訊息方塊"
+msgstr "訊息框"
 
 msgid "Message Title"
 msgstr "訊息標題"
 
 msgid "Message Body"
-msgstr "訊息主體"
+msgstr "訊息內容"
 
 msgid "Whether allow users restrict author page himself?"
 msgstr "是否允許使用者限制自己的作者頁面？"
@@ -50,13 +50,13 @@ msgid "Notice message title. Default: Notice"
 msgstr "訊息提醒標題 預設：通知"
 
 msgid "Notice message body content."
-msgstr "訊息提醒主體"
+msgstr "訊息內容"
 
 msgid "Custom accept button text. Default: Accept"
-msgstr "自定義接受按鈕上的文字。預設：接受"
+msgstr "自定接受按鈕上的文字。預設：接受"
 
 msgid "Custom decline button text. Default: Decline"
-msgstr "自定義拒絕按鈕上的文字。預設：拒絕"
+msgstr "自定拒絕按鈕上的文字。預設：拒絕"
 
 msgid "Accept Button"
 msgstr "接受按鈕"
@@ -65,10 +65,10 @@ msgid "Decline Button"
 msgstr "拒絕按鈕"
 
 msgid "Custom decline redirect URL. Default: Homepage"
-msgstr "自定義拒絕重新導向URL。預設：首頁"
+msgstr "自定拒絕按鈕重新導向網址。預設：首頁"
 
 msgid "Decline Redirect"
-msgstr "拒絕重新導向"
+msgstr "拒絕後重新導向"
 
 msgid "Advertisement"
 msgstr "廣告"
@@ -77,7 +77,7 @@ msgid "Advertise Code"
 msgstr "廣告代碼"
 
 msgid "Multiple shortcode use <Enter> to separate."
-msgstr "多個短代碼用<Enter>分開"
+msgstr "多個短代碼用 <Enter> 分隔"
 
 msgid "Use Shortcode Enable Restriction"
 msgstr "使用短代碼啟用限制"
@@ -89,9 +89,6 @@ msgstr "短代碼清單"
 msgid "Content Restriction"
 msgstr "內容限制"
 
-msgid "Restirct Author Page"
-msgstr ""
-
 msgid "Select this option to restrict your author page."
 msgstr "選擇此選項可以限制你的作者頁。"
 
@@ -99,7 +96,7 @@ msgid "Restrict All Post"
 msgstr "限制所有文章"
 
 msgid "Select this option to restrict all your posts"
-msgstr "選擇此選項將限制所有的文章"
+msgstr "限制您發佈的所有文章。"
 
 #. On post / page editor
 msgid "Restrict this post"

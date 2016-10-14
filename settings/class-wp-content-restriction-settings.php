@@ -190,7 +190,7 @@ class WP_Content_Restriction_Settings {
          */
         add_settings_section(
             'wpcr-shortcode',
-            __( 'Use Shortcode Enable Restriction' ),
+            __( 'Use Shortcode Enable Restriction', CR_PLUGIN_TEXT_DOMAIN ),
             null,
             self::CR_PLUGIN_SETTINGS_SLUG
         );
@@ -198,7 +198,7 @@ class WP_Content_Restriction_Settings {
         // shortcode list
         add_settings_field(
             'wpcr-shortcode-list',
-            __( 'Shortcode List ', CR_PLUGIN_TEXT_DOMAIN ),
+            __( 'Shortcode List', CR_PLUGIN_TEXT_DOMAIN ),
             array( 'WP_Content_Restriction_Settings_Field', 'element_shortcode_list' ),
             self::CR_PLUGIN_SETTINGS_SLUG,
             'wpcr-shortcode'
@@ -239,6 +239,14 @@ class WP_Content_Restriction_Settings {
         
         // Check user has edit permission
         if ( ! current_user_can( 'edit_posts' ) || ! current_user_can( 'edit_pages' ) ) {
+            return false;
+        }
+        
+        // Check global settings
+        $allowed_restrict_archive = get_option( 'wpcr-allow-restrict-self-page' );
+        $allowed_restrict_all = get_option( 'wpcr-allow-restrict-all-post' );
+        
+        if( ! $allowed_restrict_archive && ! $allowed_restrict_all ) {
             return false;
         }
         

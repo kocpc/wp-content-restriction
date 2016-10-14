@@ -6,6 +6,9 @@
 .wp-content-restriction-notice-box {
     display: none;
 }
+.wp-content-restriction-notice-box-a-d {
+    text-align: center;
+}
 .wp-content.restriction-notice-box-header,
 .wp-content-restriction-notice-box-body,
 .wp-content-restriction-notice-box-footer,
@@ -21,16 +24,14 @@
     font-size: 1.5rem;
     text-align: center;
     font-weight: 700;
+    padding: initial!important;
+    margin: initial!important;
 }
 .wp-content-restriction-notice-box-header {
     margin-bottom: 30px;
 }
-.wp-content-restriction-notice-box-content,
-.wp-content-restriction-notice-box-title {
-    padding: initial!important;
-    margin: initial!important;
-}
 .wp-content-restriction-notice-box-content {
+    margin-bottom: 20px;
     font-size: 0.9rem;
 }
 .wp-content-restriction-notice-box-body {

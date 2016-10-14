@@ -99,6 +99,13 @@ class WP_Content_Restriction_Filter {
             return false;
         }
         
+        // Check general option
+        $allowed_restrict_archive = get_option( 'wpcr-allow-restrict-self-page' );
+        
+        if( ! $allowed_restrict_archive ) {
+            return false;
+        }
+        
         // Get author id
         $author_id = get_the_author_meta( 'ID' );
         
@@ -188,6 +195,13 @@ class WP_Content_Restriction_Filter {
      */
     public static function check_user_option( $post ) {
         
+        // Check global setting
+        $allowed_restrict_all = get_option( 'wpcr-allow-restrict-all-post' );
+        
+        if( ! $allowed_restrict_all ) {
+            return false;
+        }
+        
         // Get author id and convert to int
         $author_id = absint( $post->post_author );
         
@@ -217,7 +231,7 @@ class WP_Content_Restriction_Filter {
         $value = array(
             'title'     => $options['title']    ? $options['title']     : __( 'Notice', CR_PLUGIN_TEXT_DOMAIN ),
             'body'      => $options['body']     ? $options['body']      : null,
-            'accept'    => $options['accept']   ? $options['accept']    : __( 'Accpet', CR_PLUGIN_TEXT_DOMAIN ),
+            'accept'    => $options['accept']   ? $options['accept']    : __( 'Accept', CR_PLUGIN_TEXT_DOMAIN ),
             'decline'   => $options['decline']  ? $options['decline']   : __( 'Decline', CR_PLUGIN_TEXT_DOMAIN ),
             'redirect'  => $options['redirect'] ? $options['redirect']  : get_home_url(),
             'ad'        => $options['ad']       ? $options['ad']        : null
